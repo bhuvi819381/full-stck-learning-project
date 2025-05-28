@@ -1,0 +1,224 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  /* IMPROVEMENT: Changed from black to a more professional gradient background */
+  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  /* IMPROVEMENT: Added responsive padding for mobile */
+  padding: 1rem;
+}
+
+/* ===== MAIN CONTAINER ===== */
+main {
+  /* IMPROVEMENT: Made responsive with max-width instead of fixed width */
+  max-width: 50rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  display: flex;
+  /* IMPROVEMENT: Added gap for better spacing */
+  gap: 2rem;
+  /* IMPROVEMENT: Added border radius and shadow for better design */
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  /* IMPROVEMENT: Made responsive - stack on mobile */
+  flex-direction: row;
+}
+
+/* IMPROVEMENT: Added responsive design for mobile */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+}
+
+/* ===== CALCULATOR SECTION ===== */
+.calculator {
+  flex: 1;
+  /* IMPROVEMENT: Removed background color - looks cleaner */
+  padding: 1rem;
+}
+
+/* ===== FORM GROUPS ===== */
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== LABELS ===== */
+label {
+  display: block;
+  font-weight: 600;
+  /* IMPROVEMENT: Better color and spacing */
+  color: #5e7a7d;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ===== INPUTS ===== */
+input {
+  width: 100%;
+  padding: 1rem;
+  /* IMPROVEMENT: Better background and border styling */
+  background-color: #f3f8fb;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00474b;
+  /* IMPROVEMENT: Removed the problematic &::placeholder syntax - not standard CSS */
+  text-align: right;
+  transition: border-color 0.3s ease;
+}
+
+/* IMPROVEMENT: Proper placeholder styling */
+input::placeholder {
+  color: #9ebbbd;
+  font-weight: 400;
+}
+
+/* IMPROVEMENT: Added focus states */
+input:focus {
+  outline: none;
+  border-color: #26c2ad;
+}
+
+/* IMPROVEMENT: Added error state for validation */
+input.error {
+  border-color: #e17457;
+}
+
+/* ===== FIELDSET STYLING ===== */
+fieldset {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-weight: 600;
+  color: #5e7a7d;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== TIP BUTTONS ===== */
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* IMPROVEMENT: Better button styling to match the design */
+.tip-btn {
+  background-color: #00474b;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tip-btn:hover {
+  background-color: #26c2ad;
+  transform: translateY(-2px);
+}
+
+/* IMPROVEMENT: Active state styling */
+.tip-btn.active {
+  background-color: #26c2ad;
+  color: #00474b;
+}
+
+/* IMPROVEMENT: Custom tip input styling */
+#customTip {
+  grid-column: span 2;
+  background-color: #f3f8fb;
+  color: #00474b;
+  text-align: center;
+}
+
+/* ===== RESULT SECTION ===== */
+.result {
+  flex: 1;
+  /* IMPROVEMENT: Better colors matching the design */
+  background-color: #00474b;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== RESULT ITEMS ===== */
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.result-item:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.result-item p {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.result-item small {
+  color: #7f9d9f;
+  font-size: 0.8rem;
+}
+
+.result-item span {
+  /* IMPROVEMENT: Better styling for the money amounts */
+  color: #26c2ad;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ===== RESET BUTTON ===== */
+#reset-btn {
+  background-color: #26c2ad;
+  color: #00474b;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#reset-btn:hover {
+  background-color: #9fe8df;
+  transform: translateY(-2px);
+}
+
+/* IMPROVEMENT: Disabled state for reset button */
+#reset-btn:disabled {
+  background-color: #0d686d;
+  color: #547878;
+  cursor: not-allowed;
+  transform: none;
+}

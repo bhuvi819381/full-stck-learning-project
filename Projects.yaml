@@ -1,0 +1,69 @@
+ Beginner Projects (Days 1–7)
+ 
+    Focus: JavaScript, logic, basic Node.js & Express
+
+Tip Calculator (Frontend) – Basic logic & form input
+
+To-Do List (Frontend + LocalStorage) – CRUD logic
+
+Quiz App (Frontend) – Score logic, dynamic UI
+
+Simple REST API with Express (No DB) – Task Manager API
+
+Notes App API with File Storage – Backend file I/O logic
+
+User Auth System (Register/Login) [No DB] – Hashing, JWT basics
+
+Form Validator Tool – Regex, error handling logic
+
+Intermediate Projects (Days 8–20)
+   Focus: MongoDB, Auth, real APIs, connecting frontend-backend
+
+Full REST API with MongoDB – CRUD + database connection
+
+User Auth API with JWT + MongoDB – Sessions, protected routes
+
+Blog API with Categories & Comments – Nested schemas
+
+Frontend Blog Viewer (React) – Fetching posts
+
+MERN Notes App (CRUD + Auth) – Basic full stack project
+
+Habit Tracker (User + Habit CRUD) – One-to-many relation
+
+Expense Tracker (with Charts) – Logic + data visualization
+
+Job Board API (with Pagination & Filtering) – Query logic
+
+Upload Images with Multer + Cloudinary – File handling
+
+Simple Chat API (no sockets) – Message and thread system
+
+Weather Dashboard (API integration) – Frontend + 3rd party API
+
+Dashboard UI + Auth Integration (React + Node) – Protected frontend
+
+Deploy Project to Render + Vercel – Deployment flow
+
+Advanced Projects (Days 21–30+)
+   Focus: Real-world features, scalable structure, team-level projects
+
+Task Management System (like Trello) – Drag-drop, team features
+
+E-commerce Backend (Products, Cart, Orders) – Complex logic
+
+MERN E-commerce Frontend – Cart UI, user flow
+
+Real-Time Chat App (Socket.IO) – Live messaging logic
+
+Blog CMS (Admin + User Roles) – RBAC (Role-Based Access)
+
+Project Management System – Deadlines, team, task status
+
+Authentication as a Service (Reusable Auth API) – Scalable backend
+
+Forum App (Threads, Replies, Likes) – Nested DB design
+
+AI-Powered App (API like OpenAI) – Connect any AI API
+
+Your Own SaaS MVP – Pick a pain point and build a solution!
