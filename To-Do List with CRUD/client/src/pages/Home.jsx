@@ -1,70 +1,72 @@
-import { useEffect, useState } from 'react';
-import { getTodos, deleteTodo } from '../api';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import api from "../api/axios";
+import TaskForm from "../components/TaskForm";
+import TaskList from "../components/TaskList";
 
-const Home = () => {
-  const [todos, setTodos] = useState([]);
-  const [message, setMessage] = useState('');
+export default function Home() {
+  const [tasks, setTasks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const fetchTodos = async () => {
-    try {
-      const res = await getTodos();
-      setTodos(res.data);
-    } catch (error) {
-      console.error('Fetch error:', error);
-    }
-  };
-
-  const handleDelete = async (id) => {
-    if (!window.confirm('Delete this todo?')) return;
-    try {
-      await deleteTodo(id);
-      setMessage('Todo deleted.');
-      fetchTodos();
+  const fetchTasks = async() => {
+    try{
+      setLoading(true);
+      const {data} = await api.get("/todos");
+      setTasks(data);
+      setError(null)
     } catch (err) {
       console.error(err);
-      setMessage('Error deleting todo.');
+      setError("Failed to fetch tasks");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(()=>{
+    fetchTasks();
+  }, []);
+
+  const addTask = async (task) => {
+    try{
+      const {data} = await api.post("/todos", task);
+      setTasks(prev => [data, ...prev]);
+    } catch (err) {
+      console.error(err);
+      alert("Could not add task");
+    }
+  }
+
+  const deleteTask = async (id) => {
+    try {
+      await api.delete(`/todos/${id}`);
+      setTasks(prev => prev.filter(t => t._id !== id));
+    } catch (err) {
+      console.error(err);
+      alert("Could not delete tasks");
+    }
+  }
+
+  const updateTask = async (id, updatedData) => {
+    try {
+      const { data } = await api.put(`/todos/${id}`, updatedData);
+      setTasks((prev) =>
+        prev.map((t) => (t._id === id ? { ...t, ...data } : t))
+      );
+    } catch (err) {
+      console.error(err);
+      alert("Could not update task");
     }
   };
 
-  useEffect(() => {
-    fetchTodos();
-  }, []);
+
+  if(loading) return <h3>Loading tasks...</h3>;
+  if(error) return <h3 className="text-red-500">{error}</h3>
 
   return (
-    <div>
-      {message && <p className="mb-4 text-green-600">{message}</p>}
-      <h2 className="text-2xl font-bold mb-6">All Todos</h2>
-
-      <ul className="space-y-4">
-        {todos.map((todo) => (
-          <li key={todo._id} className="bg-white shadow p-4 rounded-md flex justify-between items-start">
-            <div>
-              <h3 className="text-lg font-semibold">{todo.title}</h3>
-              <p className="text-gray-600">{todo.description}</p>
-              <p className="text-sm text-gray-400 mt-1">
-                {todo.completed ? '✅ Completed' : '🕓 Incomplete'}
-              </p>
-            </div>
-            <div className="space-x-2">
-              <Link
-                to={`/edit/${todo._id}`}
-                className="bg-yellow-400 text-white px-3 py-1 rounded hover:bg-yellow-500"
-              >
-                Edit
-              </Link>
-              <button
-                onClick={() => handleDelete(todo._id)}
-                className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-              >
-                Delete
-              </button>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <div className="w-3xl m-auto my-15">
+      <h1 className="text-3xl font-bold text-center">Todo App</h1>
+      <TaskForm onAdd={addTask} />
+      <TaskList tasks={tasks} onDelete={deleteTask} onUpdate={updateTask} />
     </div>
   );
 }
-
-export default Home;

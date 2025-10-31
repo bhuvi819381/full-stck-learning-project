@@ -1,112 +1,112 @@
 🟢 Beginner Projects (Core Concepts + CRUD)
-✅ Focus: CRUD operations, forms, routing, and simple UI.
+  ✅ Focus: CRUD operations, forms, routing, and simple UI.
 
-ToDo List App
+  ToDo List App
 
-Add, edit, delete, and mark tasks as complete.
+    Add, edit, delete, and mark tasks as complete.
 
-Learn: Basic CRUD, form handling, Express routes.
+    Learn: Basic CRUD, form handling, Express routes.
 
-Notes Keeper
+  Notes Keeper
 
-Rich-text notes with title and description.
+    Rich-text notes with title and description.
 
-Learn: MongoDB schema basics, React state.
+    Learn: MongoDB schema basics, React state.
 
-Contact Book
+  Contact Book
 
-Add, update, and delete contact details (name, phone, email).
+    Add, update, and delete contact details (name, phone, email).
 
-Learn: REST API, form validation.
+    Learn: REST API, form validation.
 
-Blog App (Basic)
+  Blog App (Basic)
 
-Users can read and write blog posts (no auth).
+    Users can read and write blog posts (no auth).
 
-Learn: API structure, using useEffect and useState.
+   Learn: API structure, using useEffect and useState.
 
-Student Record System
+  Student Record System
 
-Add students with name, class, and grades.
+    Add students with name, class, and grades.
 
-Learn: Connecting frontend and backend with MongoDB.
+    Learn: Connecting frontend and backend with MongoDB.
 
 🟡 Intermediate Projects (Authentication + Real Features)
-✅ Focus: Authentication, advanced state management, role-based access.
+  ✅ Focus: Authentication, advanced state management, role-based access.
 
-User Auth System
+  User Auth System
 
-Sign up, login, logout with JWT tokens.
+  Sign up, login, logout with JWT tokens.
 
-Learn: Authentication, authorization, protected routes.
+  Learn: Authentication, authorization, protected routes.
 
-Task Manager
+  Task Manager
 
-Assign tasks to different users.
+  Assign tasks to different users.
 
-Learn: User roles, protected CRUD per user.
+  Learn: User roles, protected CRUD per user.
 
-Expense Tracker
+  Expense Tracker
 
-Manage and categorize expenses by user.
+  Manage and categorize expenses by user.
 
-Learn: Charts (Recharts), user-specific data.
+  Learn: Charts (Recharts), user-specific data.
 
-Blog App (with Auth)
+  Blog App (with Auth)
 
-Users create/edit/delete their own posts.
+  Users create/edit/delete their own posts.
 
-Learn: Full auth + dashboard + rich text editor.
+  Learn: Full auth + dashboard + rich text editor.
 
-Job Board
+  Job Board
 
-Companies post jobs, users apply.
+  Companies post jobs, users apply.
 
-Learn: Relationships in MongoDB, form-heavy apps.
+  Learn: Relationships in MongoDB, form-heavy apps.
 
 🔵 Advanced Projects (Admin Panels, File Uploads, Payments)
-✅ Focus: Large-scale structure, deployment, optimization, APIs, real-world complexity.
+  ✅ Focus: Large-scale structure, deployment, optimization, APIs, real-world complexity.
 
-E-commerce Store
+  E-commerce Store
 
-Add to cart, checkout, orders, payments (Stripe or Razorpay).
+  Add to cart, checkout, orders, payments (Stripe or Razorpay).
 
-Learn: Payments, product management, images.
+  Learn: Payments, product management, images.
 
-School Management System
+  School Management System
 
-Admins manage students, teachers, courses.
+  Admins manage students, teachers, courses.
 
-Learn: Role-based dashboard, relationships.
+  Learn: Role-based dashboard, relationships.
 
-Project Collaboration Tool (Trello Clone)
+  Project Collaboration Tool (Trello Clone)
 
-Drag-and-drop tasks, comments, teams.
+  Drag-and-drop tasks, comments, teams.
 
-Learn: Real-time UI updates, socket.io (optional).
+  Learn: Real-time UI updates, socket.io (optional).
 
-Online Learning Platform
+  Online Learning Platform
 
-Courses, lessons, video uploads, quiz.
+  Courses, lessons, video uploads, quiz.
 
-Learn: Media uploads (Cloudinary), nested routes, auth.
+  Learn: Media uploads (Cloudinary), nested routes, auth.
 
-Social Media App
+  Social Media App
 
-Posts, likes, comments, followers.
+  Posts, likes, comments, followers.
 
-Learn: Feeds, notifications, scalability.
+  Learn: Feeds, notifications, scalability.
 
 🧠 Bonus (Expert-Level Concepts)
-Add these to any advanced app:
+  Add these to any advanced app:
 
-Real-Time Chat (socket.io)
+  Real-Time Chat (socket.io)
 
-Image Uploads (Multer + Cloudinary)
+  Image Uploads (Multer + Cloudinary)
 
-Email Verification + Forgot Password
+  Email Verification + Forgot Password
 
-Admin Dashboard with Analytics
+  Admin Dashboard with Analytics
 
-Rate Limiting + Security (Helmet, CORS)
+  Rate Limiting + Security (Helmet, CORS)
 

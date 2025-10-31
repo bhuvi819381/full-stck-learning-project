@@ -1,1 +1,9 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+body {
+    max-width: 90rem;
+    min-height: 100vh;
+    margin-inline: auto;
+    background-color: #111111;
+    color: white;
+}
